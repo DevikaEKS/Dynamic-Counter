@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #countlabel{
+            font-size: 90px;
+            display: flex;
+            justify-content: center;
+            color: white;
+            
+           
+         
+        
+        }
+        #incbtn, #decbtn{
+            background-color: rgb(11, 108, 113);
+            margin: 20px;
+            height: 50px;
+            box-shadow: 5px 5px 10px 2px rgb(1, 0, 0);
+            color: white;
+            border-radius: 12px;
+            border-color: rgb(7, 100, 55);
+           
+        }
+       #restbtn{
+            background-color: rgb(228, 16, 143);
+            margin: 20px;
+            border-color:rgb(247, 10, 152);
+            height: 50px;
+            box-shadow: 5px 5px 10px 2px bl ;
+            color: white;
+            border-radius: 12px;
+            padding: 10px;
+           
+        }
+        .content{
+        display: flex;
+        justify-content: center;
+        }
+        .counter{
+           
+            background-image: linear-gradient(45deg,black,purple);
+            height: 400px;
+            width: 600px;
+            margin: auto;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <div class="counter">
+        <h1>Counter</h1>
+  <label id="countlabel">0</label><br>
+  <div class="content">
+ 
+  <button id="incbtn">Increment</button><br>
+  <button id="decbtn">Decrement</button><br>
+  <button id="restbtn">Reset</button>
+</div>
+</div>  
+     <script>
+       let count=0;
+       let a=document.getElementById("incbtn")
+       a.onclick=function (){
+        count+=1
+        document.getElementById("countlabel").innerHTML=count;
+       }
+       document.getElementById("decbtn").onclick=function (){
+        count-=1;
+        document.getElementById("countlabel").innerHTML=count;     
+    }
+    document.getElementById("restbtn").onclick=function (){
+    //    count=0;
+       document.getElementById("countlabel").innerHTML=0;
+    } 
+     </script>
+
+    
+</body>
+</html>
